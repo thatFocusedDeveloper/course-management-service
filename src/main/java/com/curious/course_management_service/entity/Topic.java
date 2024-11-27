@@ -6,13 +6,11 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Component
-public class Course {
+public class Topic {
     private int id;
     private String name;
     private String description;
-    private Topic topic;
-
 }
