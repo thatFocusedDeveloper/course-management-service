@@ -53,4 +53,9 @@ public class TopicController {
     public void updateTopic(@RequestBody Topic topic) {
         topicService.updateTopic(topic);
     }
+
+    @DeleteMapping
+    public void deleteTopicById(@RequestParam Integer id) {
+        topicService.deleteTopic(id);
+    }
 }

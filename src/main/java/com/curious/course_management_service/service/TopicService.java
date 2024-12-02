@@ -46,4 +46,8 @@ public class TopicService {
                     topics.set(index, newTopic);
                 });
     }
+
+    public void deleteTopic (Integer id) {
+        topics.removeIf(topic -> topic.getId() == id);
+    }
 }
