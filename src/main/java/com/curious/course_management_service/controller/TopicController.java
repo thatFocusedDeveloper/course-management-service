@@ -43,4 +43,9 @@ public class TopicController {
 //        return topicService.getTopicById(id);
 //
 //    }
+
+    @PostMapping
+    public void addTopic(@RequestBody Topic topic) {
+        topicService.addTopic(topic);
+    }
 }
