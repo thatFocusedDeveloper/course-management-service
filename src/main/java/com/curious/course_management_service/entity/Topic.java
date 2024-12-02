@@ -5,10 +5,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Component
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Topic {
     private int id;
     private String name;
