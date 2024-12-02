@@ -29,4 +29,21 @@ public class TopicService {
             topics.add(newTopic);
         }
     }
+
+    public void updateTopic (Topic newTopic) {
+//        boolean isExistingTopic = false;
+//        for (int i = 0; i < topics.size(); i++) {
+//            if (topics.get(i).getId() == newTopic.getId()) {
+//                isExistingTopic = true;
+//                topics.set(i,newTopic);
+//            }
+//        }
+        topics.stream()
+                .filter(topic -> topic.getId() == newTopic.getId())
+                .findFirst()
+                .ifPresent(existingTopic -> {
+                    int index = topics.indexOf(existingTopic);
+                    topics.set(index, newTopic);
+                });
+    }
 }
